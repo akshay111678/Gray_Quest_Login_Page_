@@ -1,0 +1,15 @@
+{% extends "layout/parent.html" %}
+{% block menublock %}
+  <div class="text-center">
+    <div class="col-6">
+      <form method="POST">
+          {% csrf_token %}
+          {{form}}
+          <input type="submit" value="Submit" class="btn btn-primary"/>
+          {% if msg %}
+            <h3>{{msg}}</h3>
+          {% endif %}  
+      </form>
+    </div>
+  </div>
+{% endblock %}   

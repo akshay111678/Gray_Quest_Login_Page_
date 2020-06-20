@@ -1,0 +1,10 @@
+{% extends "layout/parent.html" %}
+{% block menublock %}
+{% load static %}
+{% if msg %}
+  WELCOME <b><i>{{msg}}</i></b> !
+{% endif %}
+  <h1></h1>
+  {{ content }}
+  <img src="{% static 'img/home.jpg' %}" width="1109" height="700">
+{% endblock %}    
